@@ -24,7 +24,7 @@ public class TaxPersonExecutor {
         do {
             System.out.println("Enter the price of item as number or foating number with max 2 decimals");
             String inputCost = scanner.nextLine();
-            if(inputCost.matches(REGEX)) {
+            if(isValidNumberInput(inputCost)) {
                 cost = Double.parseDouble(inputCost);
             }
         } while (cost == -1.0);
@@ -48,4 +48,7 @@ public class TaxPersonExecutor {
         scanner.close();
     }
 
+    public static boolean isValidNumberInput(String input){
+        return input.matches(REGEX);
+    }
 }

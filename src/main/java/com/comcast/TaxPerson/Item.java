@@ -91,7 +91,7 @@ public class Item {
      * @param input
      * @return
      */
-    private double roundToPennies(double input) {
+    public double roundToPennies(double input) {
         BigDecimal value = new BigDecimal(input);
         return value.setScale(2, RoundingMode.HALF_EVEN).doubleValue();
     }
